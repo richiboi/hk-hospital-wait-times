@@ -25,19 +25,11 @@ export default async function Home() {
         {/* <SettingsModal /> */}
       </div>
 
-      {false ? (
-        <>
-          {/* <LoadingSkeleton />
-          <LoadingSkeleton />
-          <LoadingSkeleton /> */}
-        </>
-      ) : (
-        <div className="mb-2.5">
-          {hospitalData.map((hospital) => (
-            <Card data={hospital} distance={2} key={hospital.name[0]} />
-          ))}
-        </div>
-      )}
+      <div className="mb-2.5">
+        {hospitalData.map((hospital) => (
+          <Card data={hospital} key={hospital.name[0]} />
+        ))}
+      </div>
     </div>
   );
 }
