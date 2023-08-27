@@ -5,6 +5,7 @@ import { getDistanceFromLatLonInKm } from "@/utils/distance";
 import { getDictionary } from "@/utils/getDictionary";
 import { translations } from "@/utils/translations";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Page({
   params: { lang },
@@ -22,10 +23,10 @@ export default async function Page({
           <h2 className="text-base text-gray-700 font-medium">
             {dict.headerSubtitle}
           </h2>
-          <h3 className="text-sm text-gray-500 font-light">
+          {/* <h3 className="text-sm text-gray-500 font-light">
             {dict.headerSubsubtitle}
             {updateTime}
-          </h3>
+          </h3> */}
         </div>
         {/* <SettingsModal /> */}
       </div>
@@ -35,6 +36,13 @@ export default async function Page({
           <Card data={hospital} key={hospital.name[0]} lang={lang} />
         ))}
       </div>
+
+      <Link
+        className=" w-screen justify-center align-center"
+        href={lang == "en" ? "/zh" : "en"}
+      >
+        {lang == "en" ? "中文" : "ENG"}
+      </Link>
     </div>
   );
 }
