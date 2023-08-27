@@ -37,7 +37,9 @@ type Props = {
 };
 
 export default function DistanceText({ latitude, longitude }: Props) {
-  const { latitude: myLatitude, longitude: myLongitude } = useGeolocation();
+  const { latitude: myLatitude, longitude: myLongitude } = useGeolocation({
+    enableHighAccuracy: true,
+  });
   const distance = getDistanceFromLatLonInKm(
     latitude,
     longitude,
