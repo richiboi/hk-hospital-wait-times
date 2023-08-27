@@ -26,9 +26,9 @@ const Ring = ({ time, lang }: Props) => {
 
   return (
     <div
-      className={`shrink-0 w-16 h-16 rounded-full border-8 ${ringColorClass} flex items-center justify-center text-center leading-snug`}
+      className={`shrink-0 w-16 h-16 rounded-full border-8 ${ringColorClass} flex items-center justify-center text-center`}
     >
-      <h1 className="text-lg mb-[-3px]">{time}</h1>
+      <h1 className="text-lg">{time}</h1>
       <p>
         {lang === "en"
           ? "hr" + (time > 1 ? "s" : "")

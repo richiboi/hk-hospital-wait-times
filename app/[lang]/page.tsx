@@ -37,12 +37,14 @@ export default async function Page({
         ))}
       </div>
 
-      <Link
-        className=" w-screen justify-center align-center"
-        href={lang == "en" ? "/zh" : "en"}
-      >
-        {lang == "en" ? "中文" : "ENG"}
-      </Link>
+      <div className="flex items-center justify-center">
+        <Link
+          className="underline text-blue-500"
+          href={lang == "en" ? "/zh" : "en"}
+        >
+          {lang == "en" ? "中文" : "ENG"}
+        </Link>
+      </div>
     </div>
   );
 }
